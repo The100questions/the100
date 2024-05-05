@@ -1,4 +1,5 @@
 <script lang="ts">
+  import MainWrapper from "$lib/components/ui/MainWrapper.svelte";
   import { Header } from "$lib/components/ui/header";
   import * as Table from "$lib/components/ui/table";
   import { HOMEPAGE_SEO } from "@constants/seo";
@@ -15,7 +16,7 @@
 </svelte:head>
 
 <Header />
-<main class="w-full max-w-[1200px] mx-auto">
+<MainWrapper>
   <div class="w-full flex p-6">
     <section aria-label="questions" class="flex-1">
       <Table.Root>
@@ -46,4 +47,4 @@
       Hey ads
     </section>
   </div>
-</main>
+</MainWrapper>
