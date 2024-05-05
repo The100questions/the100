@@ -1,5 +1,7 @@
 <script>
+  import { cn } from "$lib/utils";
   import ThemeSelector from "../ThemeSelector.svelte";
+  import { buttonVariants } from "../button";
 </script>
 
 <header
@@ -8,8 +10,30 @@
   <div
     class="max-w-[1200px] w-full mx-auto container flex items-center justify-between h-14"
   >
-    <h1 class="text-xl font-bold font-mono">The100</h1>
-    <div>
+    <a href="/">
+      <h1 class="text-xl font-bold font-mono">The100</h1>
+    </a>
+    <div class="flex items-center justify-center gap-3">
+      <nav class="flex items-center gap-2">
+        <a
+          href="/register"
+          class={cn(
+            buttonVariants({
+              variant: "ghost",
+            })
+          )}>Register</a
+        >
+        or
+        <a
+          href="/login"
+          class={cn(
+            buttonVariants({
+              variant: "ghost",
+            })
+          )}>Login</a
+        >
+      </nav>
+
       <ThemeSelector />
     </div>
   </div>
