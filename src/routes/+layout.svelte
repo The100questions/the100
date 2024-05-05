@@ -1,5 +1,7 @@
 <script>
-	import '../global.css';
+  import "../global.css";
 </script>
 
-<slot />
+<div class="min-w-[360px] min-h-screen">
+  <slot />
+</div>
