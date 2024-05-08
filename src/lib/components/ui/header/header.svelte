@@ -1,5 +1,6 @@
 <script>
   import { cn } from "$lib/utils";
+  import LanguageSelector from "../LanguageSelector.svelte";
   import ThemeSelector from "../ThemeSelector.svelte";
   import { buttonVariants } from "../button";
 </script>
@@ -33,6 +34,7 @@
           )}>Login</a
         >
       </nav>
+      <LanguageSelector />
 
       <ThemeSelector />
     </div>

@@ -1,3 +1,4 @@
+import { ALL_LANGUAGES } from "@constants";
 import { clsx, type ClassValue } from "clsx";
 import { cubicOut } from "svelte/easing";
 import type { TransitionConfig } from "svelte/transition";
@@ -73,4 +74,13 @@ export const parseJSON = (
   } catch (e) {
     return defaultReturnValue;
   }
+};
+
+export const capitalize = (word: string) =>
+  word.charAt(0).toUpperCase() + word.slice(1);
+
+export const getValidLang = (lang: string): string => {
+  return ALL_LANGUAGES.some((language) => language.value === lang)
+    ? lang
+    : ALL_LANGUAGES[0].value;
 };
