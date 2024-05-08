@@ -15,4 +15,4 @@ export const ALL_LANGUAGES = [
     value: "hindi",
     label: "आ",
   },
-];
+] as const;

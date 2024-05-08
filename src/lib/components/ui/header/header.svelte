@@ -1,5 +1,6 @@
 <script>
   import { cn } from "$lib/utils";
+  import { t } from "@services/translation/translationService";
   import LanguageSelector from "../LanguageSelector.svelte";
   import ThemeSelector from "../ThemeSelector.svelte";
   import { buttonVariants } from "../button";
@@ -22,8 +23,10 @@
             buttonVariants({
               variant: "ghost",
             })
-          )}>Register</a
+          )}
         >
+          {$t("register")}
+        </a>
         or
         <a
           href="/login"
@@ -31,8 +34,10 @@
             buttonVariants({
               variant: "ghost",
             })
-          )}>Login</a
+          )}
         >
+          {$t("login")}
+        </a>
       </nav>
       <LanguageSelector />
 

@@ -4,8 +4,8 @@
   import "../global.css";
 </script>
 
-<ModeWatcher />
 <Toaster />
-<div class="min-w-[360px] min-h-screen">
+<ModeWatcher />
+<div class="w-full min-h-screen">
   <slot />
 </div>

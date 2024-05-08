@@ -14,6 +14,7 @@ const config = {
     adapter: adapter(),
     alias: {
       "@constants": "./src/constants",
+      "@services": "./src/services",
     },
   },
 };
