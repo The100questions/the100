@@ -79,8 +79,9 @@ export const parseJSON = (
 export const capitalize = (word: string) =>
   word.charAt(0).toUpperCase() + word.slice(1);
 
-export const getValidLang = (lang: string): string => {
-  return ALL_LANGUAGES.some((language) => language.value === lang)
-    ? lang
-    : ALL_LANGUAGES[0].value;
+export const getValidLang = (
+  lang?: string | null
+): (typeof ALL_LANGUAGES)[number]["value"] => {
+  const validLang = ALL_LANGUAGES.find((language) => language.value === lang);
+  return validLang?.value ?? ALL_LANGUAGES[0].value;
 };

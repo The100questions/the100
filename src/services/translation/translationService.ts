@@ -1,13 +1,18 @@
+import { browser } from "$app/environment";
+import { getValidLang } from "$lib/utils";
 import { ALL_LANGUAGES } from "@constants";
 import { derived, writable } from "svelte/store";
 import translations from "./translations";
 
 const defaultLang = ALL_LANGUAGES[0].value;
+const savedLang = browser
+  ? getValidLang(localStorage.getItem("lang"))
+  : defaultLang;
 
 type LangType = (typeof ALL_LANGUAGES)[number]["value"];
 type LocalesType = keyof (typeof translations)[typeof defaultLang];
 
-export const language = writable<LangType>(defaultLang);
+export const language = writable<LangType>(savedLang);
 
 function translate(
   locale: LangType = defaultLang,
@@ -31,3 +36,7 @@ export const t = derived(
     (key: LocalesType, vars = {}) =>
       translate($locale, key, vars)
 );
+
+language.subscribe((lang) => {
+  if (browser) localStorage.setItem("lang", lang);
+});
