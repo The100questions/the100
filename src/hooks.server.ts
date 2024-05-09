@@ -1,5 +1,9 @@
 import { parseJSON } from "$lib/utils";
 import { API_HEADERS, USER_COOKIES } from "@constants";
+import {
+  defaultLang,
+  language,
+} from "@services/translation/translationService";
 import type { Handle, HandleFetch } from "@sveltejs/kit";
 
 export const handle: Handle = async ({ event, resolve }) => {
@@ -8,12 +12,13 @@ export const handle: Handle = async ({ event, resolve }) => {
   if (!userLang) {
     event.cookies.set(
       USER_COOKIES.LANGUAGE,
-      JSON.stringify({ name: "english" }),
+      JSON.stringify({ name: defaultLang }),
       {
         path: "/",
       }
     );
   }
+  language.set(userLang ?? defaultLang);
   const response = await resolve(event);
   return response;
 };

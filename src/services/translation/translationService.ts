@@ -4,7 +4,7 @@ import { ALL_LANGUAGES } from "@constants";
 import { derived, writable } from "svelte/store";
 import translations from "./translations";
 
-const defaultLang = ALL_LANGUAGES[0].value;
+export const defaultLang = ALL_LANGUAGES[0].value;
 const savedLang = browser
   ? getValidLang(localStorage.getItem("lang"))
   : defaultLang;
