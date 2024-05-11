@@ -1,21 +1,13 @@
 <script lang="ts">
+  import { goto } from "$app/navigation";
   import MainWrapper from "$lib/components/ui/MainWrapper.svelte";
-  import { Header } from "$lib/components/ui/header";
   import * as Table from "$lib/components/ui/table";
-  import { HOMEPAGE_SEO } from "@constants/seo";
 
   export let data;
 
   const { questions } = data;
 </script>
 
-<svelte:head>
-  <title>{HOMEPAGE_SEO.title}</title>
-  <meta name="description" content={HOMEPAGE_SEO.description} />
-  <meta name="keywords" content={HOMEPAGE_SEO.keywords.join(", ")} />
-</svelte:head>
-
-<Header />
 <MainWrapper>
   <div class="w-full flex p-6">
     <section aria-label="questions" class="flex-1">
@@ -30,7 +22,7 @@
         </Table.Header>
         <Table.Body>
           {#each questions as question, i}
-            <Table.Row>
+            <Table.Row on:click={() => goto(`/problem/${question.id}`)}>
               <Table.Cell class="font-medium">{i + 1}</Table.Cell>
               <Table.Cell>{question.title}</Table.Cell>
               <Table.Cell>{question.level}</Table.Cell>
