@@ -10,24 +10,13 @@
   class="w-full sticky top-0 bg-white backdrop-blur bg-background/95 border-b border-border/40 supports-[backdrop-filter]:bg-background/60 z-50"
 >
   <div
-    class="max-w-[1200px] w-full mx-auto container flex items-center justify-between h-14"
+    class="max-w-[1200px] w-full mx-auto container flex items-center justify-between h-14 px-4 sm:px-8"
   >
     <a href="/">
       <h1 class="text-xl font-bold font-mono">The100</h1>
     </a>
-    <div class="flex items-center justify-center gap-3">
+    <div class="items-center justify-center gap-3 hidden sm:flex">
       <nav class="flex items-center gap-2">
-        <a
-          href="/register"
-          class={cn(
-            buttonVariants({
-              variant: "ghost",
-            })
-          )}
-        >
-          {$t("register")}
-        </a>
-        or
         <a
           href="/login"
           class={cn(
