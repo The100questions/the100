@@ -7,7 +7,7 @@
 {#if status === "attempted"}
   <CircleDashed class="text-primary" />
 {:else if status === "solved"}
-  <CircleCheck class="text-primary"/>
+  <CircleCheck class="text-primary" />
 {:else}
-  <Circle class="text-primary"/>
+  <Circle class="text-secondary" size={16} />
 {/if}
