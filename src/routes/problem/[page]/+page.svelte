@@ -1,15 +1,20 @@
 <script>
   export let data;
-  console.log(data);
+  const {question} = data ??{};
 </script>
 
-<div class="h-full w-full border-2 border-black overflow-hidden">
-  <div class="flex h-full w-full">
-    <div class="flex-1">
-      <div>it is question {data?.question?.title}</div>
-      <div>it is question {data?.question?.subTitle}</div>
-      <div>it is question {data?.question?.description}</div>
+<div class="size-full p-3">
+  <div class="size-full flex">
+    <div class="flex-1 border rounded overflow-y-auto">
+      <div>it is question {question?.title}</div>
+      <div>it is question {question?.subTitle}</div>
+      <div>it is question {question?.description}</div>
+      <div class="h-[500px] bg-red-100">sdx
+        </div>
+        <div class="h-[500px] bg-red-200">sdx
+        </div>
+
     </div>
-    <div class="flex-1">code editor</div>
+    <div class="flex-1 border rounded">code editor</div>
   </div>
 </div>

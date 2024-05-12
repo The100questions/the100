@@ -5,7 +5,6 @@
   export let data;
 
   const { questions = [] } = data ?? {};
-  console.log(data, questions);
 </script>
 
 <MainWrapper>
@@ -13,11 +12,11 @@
     <section aria-label="questions" class="flex-1">
       <QuestionList {questions} />
     </section>
-    <section
+    <!-- <section
       aria-label="right section"
       class="w-[300px] hidden md:block border border-separate"
     >
       Hey ads
-    </section>
+    </section> -->
   </div>
 </MainWrapper>

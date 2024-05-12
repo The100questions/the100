@@ -18,7 +18,7 @@
 
 <div class="w-full min-h-screen flex flex-col">
   <Header />
-  <div class="flex-1">
+  <div class="h-[calc(100vh-113px)] overflow-y-auto">
     <slot />
   </div>
   <Footer />
