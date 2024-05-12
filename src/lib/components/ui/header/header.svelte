@@ -15,7 +15,7 @@
     <a href="/">
       <h1 class="text-xl font-bold font-mono">The100</h1>
     </a>
-    <div class="items-center justify-center gap-3 hidden sm:flex">
+    <div class="items-center justify-center gap-3 flex">
       <nav class="flex items-center gap-2">
         <a
           href="/login"

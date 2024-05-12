@@ -9,7 +9,7 @@
 </script>
 
 <MainWrapper>
-  <div class="w-full flex p-6">
+  <div class="w-full flex p-0 flex-col sm:p-6 sm:flex-row">
     <section aria-label="questions" class="flex-1">
       <QuestionList {questions} />
     </section>

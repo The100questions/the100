@@ -10,9 +10,11 @@
 </script>
 
 <a href={`/problem/${question.id}`}>
-  <div class="flex items-center justify-center border rounded-lg p-4">
+  <div
+    class="flex items-center justify-center border-b sm:border sm:rounded-lg p-4 shadow"
+  >
     <QuestionStatus />
-    <div class="flex-1 px-4">
+    <div class="flex-1 px-4 overflow-hidden">
       <div class="opacity-90 text-sm font-semibold">
         {question.id}
       </div>
