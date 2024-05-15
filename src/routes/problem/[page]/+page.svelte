@@ -1,4 +1,6 @@
 <script>
+  import { CodeEditor } from "$lib/components/ui/code-editor";
+
   export let data;
   const {question} = data ??{};
 </script>
@@ -15,6 +17,8 @@
         </div>
 
     </div>
-    <div class="flex-1 border rounded">code editor</div>
+    <div class="flex-1 border rounded">
+      <CodeEditor />
+    </div>
   </div>
 </div>
