@@ -17,6 +17,12 @@ const config = {
       "@constants": "./src/constants",
       "@services": "./src/services",
     },
+    csp: {
+      mode: "auto",
+      directives: {
+        "script-src": ["'self'", "'unsafe-eval'"],
+      },
+    }
   },
 };
 
