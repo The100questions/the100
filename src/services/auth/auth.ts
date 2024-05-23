@@ -3,9 +3,11 @@ import Google from "@auth/sveltekit/providers/google"
 
 export const { handle, signIn } = SvelteKitAuth({
     trustHost: true,
-    skipCSRFCheck: Symbol("skip-csrf-check"),
-    debug: true,
   providers: [
-    Google
+    Google({
+      clientId: "143035775519-4ro6p4r4hjnudveklau9ajk45mekeaj5.apps.googleusercontent.com",
+      clientSecret: "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",
+
+    })
   ],
 })
