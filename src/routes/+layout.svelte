@@ -5,6 +5,9 @@
   import { HOMEPAGE_SEO } from "@constants/seo";
   import { ModeWatcher } from "mode-watcher";
   import "../global.css";
+
+  export let data;
+  console.log("data.session",data.session)
 </script>
 
 <svelte:head>
