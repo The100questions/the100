@@ -1,12 +1,8 @@
 import { parseJSON } from "$lib/utils";
 import { API_HEADERS, USER_COOKIES } from "@constants";
-import {
-  defaultLang,
-  language,
-} from "@services/translation/translationService";
-import type { Handle, HandleFetch } from "@sveltejs/kit";
+import type { HandleFetch } from "@sveltejs/kit";
 
-export { handle } from "./services/auth/auth"
+export { handle } from "$lib/server/auth";
 
 // export const handle: Handle = async ({ event, resolve }) => {
 //   const langCookie = event.cookies.get(USER_COOKIES.LANGUAGE);
