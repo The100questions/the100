@@ -25,11 +25,13 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@auth/mongodb-adapter": "^3.1.0",
 		"@auth/sveltekit": "^1.1.0",
 		"bits-ui": "^0.21.7",
 		"clsx": "^2.1.1",
 		"lucide-svelte": "^0.378.0",
 		"mode-watcher": "^0.3.0",
+		"mongodb": "^6.6.2",
 		"paneforge": "^0.0.4",
 		"svelte-radix": "^1.1.0",
 		"svelte-sonner": "^0.3.24",
